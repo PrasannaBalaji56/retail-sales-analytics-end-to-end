@@ -20,11 +20,11 @@ This project covers the complete analytics lifecycle:
 
 ### ⭐ Dashboard Preview
 
-![Sales & Business Performance](screenshots/01_sales_business_performance.png)
+![Sales & Business Performance](Screenshots/01_sales_business_performance.png)
 
-![Product Analysis](screenshots/02_product_analysis.png)
+![Product Analysis](Screenshots/02_product_analysis.png)
 
-![Customer & Staff Analysis](screenshots/03_customer_staff_analysis.png)
+![Customer & Staff Analysis](Screenshots/03_customer_staff_analysis.png)
 
 ---
 
@@ -181,10 +181,6 @@ Total Price = (List Price × Quantity) - Discount
 
 > If `Discount` is stored as a percentage rather than an absolute amount, the corresponding calculation should be `List Price × Quantity × (1 - Discount)`.
 
-### 🖼️ Excel Preview
-
-![Excel Data Cleaning](screenshots/excel_cleaning.png)
-
 ---
 
 # 7. 🗄️ Phase 2 — MySQL Database & SQL Analysis
@@ -221,13 +217,9 @@ This combines customer/order-date information from `orders` with transaction-val
 
 ### 🗺️ EER Diagram
 
-![Database EER Diagram](screenshots/04_eer_diagram.png)
+![Database EER Diagram](Screenshots/04_eer_diagram.png)
 
 The EER diagram shows the relational structure connecting customers, orders, products, stores, staff, brands, categories, stocks and order items.
-
-### 🖼️ SQL / Database Preview
-
-![SQL Analysis](screenshots/sql_analysis.png)
 
 ---
 
@@ -269,15 +261,11 @@ order_items.describe()
 orders["store_id"].value_counts()
 ```
 
-### 🖼️ Python EDA Preview
-
-![Python EDA](screenshots/python_eda.png)
-
 ---
 
 # 9. 👥 Phase 4 — RFM Customer Analysis
 
-RFM analysis converts transaction history into three customer-behavior dimensions:
+RFM analysis converts transaction history into three customer-behavior dimensions.
 
 ### 🔵 Recency
 
@@ -369,9 +357,19 @@ Example:
 
 `555` represents a customer in the highest scoring group across Recency, Frequency and Monetary. It is **not** 555 purchases or a currency amount.
 
-### 🖼️ RFM Scoring Report
+### 🖼️ RFM Report Images
 
-![RFM Scoring](screenshots/rfm_report/03_rfm_scoring.png)
+![RFM Roadmap](rfm_reports/01_rfm_roadmap.png)
+
+![RFM Date Handling](rfm_reports/02_rfm_date_handling.png)
+
+![RFM Scoring](rfm_reports/03_rfm_scoring.png)
+
+![RFM Segmentation Rules](rfm_reports/04_rfm_segmentation_rules.png)
+
+![RFM Final Output](rfm_reports/05_rfm_final_output.png)
+
+![RFM Validation & Interview](rfm_reports/06_rfm_validation_interview.png)
 
 ---
 
@@ -417,10 +415,6 @@ Customers who do not meet the previous rules.
 
 > These thresholds are **project-specific rules**, not universal industry standards.
 
-### 🖼️ Segmentation Rules
-
-![RFM Segmentation Rules](screenshots/rfm_report/04_rfm_segmentation_rules.png)
-
 ---
 
 # 12. 📈 Actual RFM Segmentation Result
@@ -437,10 +431,6 @@ The final project output contains **1,445 customers**.
 | **Total** | **1,445** |
 
 The segment counts add up to the full 1,445-customer population, providing an important validation check.
-
-### 🖼️ Final RFM Output
-
-![Final RFM Output](screenshots/rfm_report/05_rfm_final_output.png)
 
 ---
 
@@ -474,131 +464,48 @@ rfm.to_sql(
 )
 ```
 
-The table can then be reused for SQL reporting and Power BI analysis.
-
 ---
 
 # 14. 📊 Phase 5 — Power BI Dashboard
 
 Power BI was used to create three analytical dashboard pages.
 
----
-
 ## 14.1 💰 Sales & Business Performance
-
-The first page provides an overall sales view.
-
-### KPIs
 
 - Total Sales
 - Total Quantity Sold
 - Average Order Value
 - Total Orders
 
-### Visuals
-
-- Sales by order date
-- Monthly sales
-- Sales by product
-- Sales by staff
-- Month slicer
-- Customer segment slicer
-- Store slicer
-
-![Sales & Business Performance](screenshots/01_sales_business_performance.png)
-
----
+![Sales & Business Performance](Screenshots/01_sales_business_performance.png)
 
 ## 14.2 🛍️ Product Analysis Report
-
-The second page focuses on products and inventory.
-
-### KPIs
 
 - Total Products
 - Highest Revenue Product
 - Highest Sold Product
 
-### Visuals
-
-- Top 10 products by sales
-- Sales by state/store
-- Product quantity
-- Stock status
-- Store-level quantity distribution
-- Month filter
-- Stock-status filter
-
-![Product Analysis](screenshots/02_product_analysis.png)
-
----
+![Product Analysis](Screenshots/02_product_analysis.png)
 
 ## 14.3 👥 Customer & Staff Analysis
-
-The third page focuses on customer segmentation and staff performance.
-
-### KPIs
 
 - Customer Count
 - Total Orders
 - Total Staff
 
-### Visuals
-
-- Customer segmentation
-- Sales by customer segment
-- Sales by first name
-- Sales by staff
-- Segment filter
-- Month filter
-
-![Customer & Staff Analysis](screenshots/03_customer_staff_analysis.png)
+![Customer & Staff Analysis](Screenshots/03_customer_staff_analysis.png)
 
 ---
 
-# 15. 🎨 Dashboard Presentation
+# 15. 🗺️ Database EER Diagram
 
-The original dashboard screenshots were retained as the source visuals, but the README versions have been **visually polished for GitHub presentation** with:
-
-- ✨ Consistent framing
-- 🖼️ Clean presentation cards
-- 🟡 Consistent accent styling
-- 📐 Consistent spacing
-- 🔲 Rounded presentation borders
-- 🏷️ Clear image titles
-- 📱 Better readability when viewed in the repository
-
-The underlying dashboard data and visuals are not altered; only the README presentation images are enhanced.
+![EER Diagram](Screenshots/04_eer_diagram.png)
 
 ---
 
-# 16. 🗺️ Database EER Diagram
+# 16. 📚 RFM Learning / Documentation
 
-The database structure is represented through an Entity Relationship Diagram.
-
-![EER Diagram](screenshots/04_eer_diagram.png)
-
-### Main entities represented
-
-```text
-customers
-orders
-order_items
-products
-brands
-categories
-stocks
-stores
-staffs
-```
-
-The diagram illustrates the relational connections used to support the retail analytics workflow.
-
----
-
-# 17. 📚 RFM Learning / Documentation
-
-A complete RFM guide was created alongside the project to explain:
+The RFM guide covers:
 
 - MySQL → Pandas connection
 - Loading SQL tables
@@ -610,39 +517,12 @@ A complete RFM guide was created alongside the project to explain:
 - Frequency calculation
 - Monetary calculation
 - RFM scoring
-- Combined RFM score
 - Customer segmentation
 - Validation
 - Export back to MySQL
 - Interview explanation
 
-### 📖 RFM Report Images
-
-#### Roadmap
-
-![RFM Roadmap](screenshots/rfm_report/01_rfm_roadmap.png)
-
-#### Date Handling
-
-![RFM Date Handling](screenshots/rfm_report/02_rfm_date_handling.png)
-
-#### Scoring
-
-![RFM Scoring](screenshots/rfm_report/03_rfm_scoring.png)
-
-#### Segmentation
-
-![RFM Segmentation](screenshots/rfm_report/04_rfm_segmentation_rules.png)
-
-#### Final Output
-
-![RFM Final Output](screenshots/rfm_report/05_rfm_final_output.png)
-
-#### Validation & Interview Explanation
-
-![RFM Validation](screenshots/rfm_report/06_rfm_validation_interview.png)
-
-📄 The complete RFM guide is also included in:
+📄 The complete RFM guide is included in:
 
 ```text
 docs/RFM_Customer_Segmentation_Full_Guide.pdf
@@ -650,7 +530,7 @@ docs/RFM_Customer_Segmentation_Full_Guide.pdf
 
 ---
 
-# 18. 📈 Key Business Questions Answered
+# 17. 📈 Key Business Questions Answered
 
 ## 💵 Sales
 
@@ -697,7 +577,7 @@ docs/RFM_Customer_Segmentation_Full_Guide.pdf
 
 ---
 
-# 19. 📊 Key KPIs
+# 18. 📊 Key KPIs
 
 | KPI | Business Meaning |
 |---|---|
@@ -712,202 +592,9 @@ docs/RFM_Customer_Segmentation_Full_Guide.pdf
 
 ---
 
-# 20. 🧠 Key Analytical Decisions
-
-### Why merge `orders` and `order_items`?
-
-Customer identity and order date are stored in `orders`, while product quantity and transaction value are stored in `order_items`.
-
-### Why use `nunique()` for Frequency?
-
-One order can contain multiple item rows. Counting rows would overstate order frequency.
-
-### Why reverse Recency scoring?
-
-Lower Recency means a more recent purchase, so the most recent customers receive the highest Recency score.
-
-### Why use `qcut()`?
-
-It creates five relative customer groups, allowing the project to compare customers consistently across R, F and M.
-
-### Why use `rank(method="first")`?
-
-Frequency and Monetary can contain repeated values. Ranking first gives `qcut()` a unique ordering when creating five groups.
-
-### Why export the result to SQL?
-
-The segmented customer table can be reused for dashboards, reporting and further SQL analysis.
-
----
-
-# 21. 📁 Recommended GitHub Repository Structure
-
-```text
-retail-sales-analytics/
-│
-├── README.md
-├── .gitignore
-│
-├── data/
-│   ├── raw/
-│   └── cleaned/
-│
-├── excel/
-│   └── Excel_cleaned.xlsx
-│
-├── sql/
-│   ├── schema.sql
-│   └── analysis_queries.sql
-│
-├── python/
-│   └── retail_sales_analysis.ipynb
-│
-├── powerbi/
-│   └── Retail_Sales_Dashboard.pbix
-│
-├── docs/
-│   └── RFM_Customer_Segmentation_Full_Guide.pdf
-│
-├── report/
-│   └── Project_Report.pdf
-│
-├── presentation/
-│   └── Final_Presentation.pptx
-│
-└── screenshots/
-    ├── 01_sales_business_performance.png
-    ├── 02_product_analysis.png
-    ├── 03_customer_staff_analysis.png
-    ├── 04_eer_diagram.png
-    ├── excel_cleaning.png
-    ├── sql_analysis.png
-    ├── python_eda.png
-    │
-    └── rfm_report/
-        ├── 01_rfm_roadmap.png
-        ├── 02_rfm_date_handling.png
-        ├── 03_rfm_scoring.png
-        ├── 04_rfm_segmentation_rules.png
-        ├── 05_rfm_final_output.png
-        └── 06_rfm_validation_interview.png
-```
-
----
-
-# 22. 🚀 How to Run the Project
-
-## Step 1 — Clone the Repository
-
-```bash
-git clone https://github.com/PrasannaBalaji56/retail-sales-analytics.git
-cd retail-sales-analytics
-```
-
-## Step 2 — Prepare the Database
-
-Create the MySQL database and tables using the SQL scripts.
-
-```text
-sql/schema.sql
-```
-
-Load the cleaned data into the corresponding tables.
-
-## Step 3 — Run SQL Analysis
-
-Execute:
-
-```text
-sql/analysis_queries.sql
-```
-
-## Step 4 — Run Python
-
-Open:
-
-```text
-python/retail_sales_analysis.ipynb
-```
-
-Install the required libraries:
-
-```bash
-pip install pandas numpy matplotlib seaborn sqlalchemy pymysql scikit-learn
-```
-
-Update the local MySQL connection credentials before running database-dependent cells.
-
-## Step 5 — Run RFM Analysis
-
-The Python workflow:
-
-```text
-MySQL
-  ↓
-Pandas
-  ↓
-orders + order_items
-  ↓
-RFM metrics
-  ↓
-RFM scores
-  ↓
-Customer segments
-  ↓
-customer_segments
-```
-
-## Step 6 — Open Power BI
-
-Open:
-
-```text
-powerbi/Retail_Sales_Dashboard.pbix
-```
-
-Update the MySQL connection if required.
-
----
-
-# 23. 🧪 Validation
-
-The project includes validation checks for:
-
-- Data types
-- Missing values
-- Date conversion
-- Latest transaction date
-- Recency values
-- Frequency distribution
-- Monetary values
-- RFM score distribution
-- Segment counts
-- SQL export
-
-### RFM Validation
-
-The project produced:
-
-```text
-1,445 customers
-289 customers per R score
-289 customers per M score
-```
-
-The final segment counts sum to:
-
-```text
-1,445
-```
-
-This confirms that all customers were retained through the segmentation step.
-
----
-
-# 24. 🧠 Skills Demonstrated
+# 19. 🧠 Skills Demonstrated
 
 ### 📊 Data Analytics
-
 - Data Cleaning
 - Data Preprocessing
 - Exploratory Data Analysis
@@ -916,7 +603,6 @@ This confirms that all customers were retained through the segmentation step.
 - Data Visualization
 
 ### 📗 Excel
-
 - VLOOKUP
 - XLOOKUP
 - Pivot Tables
@@ -925,7 +611,6 @@ This confirms that all customers were retained through the segmentation step.
 - Data Validation
 
 ### 🗄️ SQL
-
 - Database Design
 - Relational Data Modeling
 - Primary Keys
@@ -938,7 +623,6 @@ This confirms that all customers were retained through the segmentation step.
 - Business Analysis
 
 ### 🐍 Python
-
 - Pandas
 - NumPy
 - Matplotlib
@@ -947,7 +631,6 @@ This confirms that all customers were retained through the segmentation step.
 - Exploratory Data Analysis
 
 ### 👥 Customer Analytics
-
 - RFM Analysis
 - Recency
 - Frequency
@@ -956,7 +639,6 @@ This confirms that all customers were retained through the segmentation step.
 - Customer Segmentation
 
 ### 📊 Power BI
-
 - Data Modeling
 - KPI Cards
 - Interactive Dashboards
@@ -970,11 +652,9 @@ This confirms that all customers were retained through the segmentation step.
 
 ---
 
-# 25. 🎓 Project Context
+# 20. 🎓 Project Context
 
 This project was completed as part of Data Analytics training at **Vinsup Skill Academy**.
-
-The project follows an end-to-end analytics workflow covering Excel, SQL, Python, RFM customer analytics and Power BI.
 
 ### 📌 Domain
 
@@ -988,27 +668,11 @@ Business Intelligence
 
 ---
 
-# 26. 👨‍💻 Author
+# 21. 👨‍💻 Author
 
 ## Prasanna Balaji M
 
 **Data Analyst | Data Science Enthusiast**
-
-### Technical Skills
-
-```text
-Python
-SQL
-Excel
-Power BI
-Pandas
-NumPy
-Matplotlib
-Seaborn
-Machine Learning
-RFM Analysis
-Data Analytics
-```
 
 ### 🔗 GitHub
 
@@ -1016,33 +680,13 @@ https://github.com/PrasannaBalaji56/
 
 ---
 
-# 27. 📜 Project Authorization
-
-The project documentation identifies the project as part of the Vinsup Skill Academy program.
-
-**Project Created By**
-
-M S Gaurav Kumar  
-Skill Mentor – Data Analytics  
-Vinsup Skill Academy
-
-**Project Approved By**
-
-Pooranam Annamalai  
-Chief Business & Production Officer  
-Vinsup Skill Academy
-
----
-
-# 28. 💼 Interview Explanation
-
-A concise way to explain the project:
+# 22. 💼 Interview Explanation
 
 > “I worked on an end-to-end retail analytics project where I cleaned and prepared data using Excel, loaded it into a MySQL relational database, and performed SQL-based business analysis. I then connected MySQL to Python using SQLAlchemy and PyMySQL, loaded orders, order items and customer data into Pandas, and performed EDA. For customer analytics, I calculated Recency, Frequency and Monetary metrics, converted them into five quantile-based scores, created rule-based customer segments, and exported the final customer segmentation back to MySQL. Finally, I used Power BI to build interactive dashboards covering sales, products, customers, stores, staff and inventory.”
 
 ---
 
-# 29. ⭐ Conclusion
+# 23. ⭐ Conclusion
 
 This project demonstrates how raw retail data can be transformed into meaningful business intelligence through a complete analytics pipeline.
 
@@ -1067,5 +711,3 @@ The project combines technical data skills with business-oriented analysis and d
 ---
 
 ## ⭐ If you find this project useful, consider giving the repository a star!
-
-![GitHub Stars](https://img.shields.io/github/stars/PrasannaBalaji56/retail-sales-analytics?style=social)
